@@ -1,0 +1,303 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Example.gd" type="Script" id=1]
+
+[node name="Control" type="GridContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+margin_bottom = -1.0
+columns = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+margin_right = 510.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="VBox"]
+margin_right = 510.0
+margin_bottom = 294.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBox/Panel"]
+margin_left = 8.0
+margin_top = 85.0
+margin_right = 109.0
+margin_bottom = 109.0
+size_flags_horizontal = 3
+text = "Name of app: "
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_start_announce" type="Button" parent="VBox/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -74.0
+margin_top = 177.508
+margin_right = 74.0
+margin_bottom = 197.508
+grow_horizontal = 2
+size_flags_horizontal = 3
+text = "Start announcements"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_start_server" type="Button" parent="VBox/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -74.0
+margin_top = 148.0
+margin_right = 74.0
+margin_bottom = 168.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+text = "Start server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_stop_server" type="Button" parent="VBox/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -74.0
+margin_top = 234.0
+margin_right = 74.0
+margin_bottom = 254.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+text = "Stop server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_stop_announce" type="Button" parent="VBox/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -73.5
+margin_top = 206.508
+margin_right = 73.5
+margin_bottom = 226.508
+grow_horizontal = 2
+size_flags_horizontal = 3
+text = "Stop announcements"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txt_app_name" type="LineEdit" parent="VBox/Panel"]
+margin_left = 125.0
+margin_top = 85.0
+margin_right = 489.0
+margin_bottom = 109.0
+rect_rotation = -0.0643428
+hint_tooltip = "Network-unique name for this server instance"
+text = "TestApp"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBox/Panel"]
+margin_left = 7.0
+margin_top = 121.0
+margin_right = 109.0
+margin_bottom = 144.0
+text = "Announce Port: "
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txt_udp_port" type="LineEdit" parent="VBox/Panel"]
+margin_left = 125.0
+margin_top = 120.0
+margin_right = 201.0
+margin_bottom = 144.0
+hint_tooltip = "UDP port to use for server management"
+text = "9000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="VBox/Panel"]
+margin_top = 8.0
+margin_right = 510.0
+margin_bottom = 48.0
+text = "Broadcast server"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator" type="HSeparator" parent="VBox"]
+margin_top = 298.0
+margin_right = 510.0
+margin_bottom = 302.0
+
+[node name="Panel2" type="Panel" parent="VBox"]
+margin_top = 306.0
+margin_right = 510.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label4" type="Label" parent="VBox/Panel2"]
+margin_top = 8.0
+margin_right = 510.0
+margin_bottom = 48.0
+text = "Broadcast client"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/Panel2"]
+margin_left = 8.0
+margin_top = 80.0
+margin_right = 128.0
+margin_bottom = 105.0
+text = "App to join to: "
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txt_client_app" type="LineEdit" parent="VBox/Panel2"]
+margin_left = 137.0
+margin_top = 80.0
+margin_right = 255.0
+margin_bottom = 105.0
+text = "TestApp"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="VBox/Panel2"]
+margin_left = 8.0
+margin_top = 121.0
+margin_right = 125.0
+margin_bottom = 167.0
+text = "Available servers: "
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="VBox/Panel2"]
+margin_left = 137.0
+margin_top = 120.0
+margin_right = 390.0
+margin_bottom = 212.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_register" type="Button" parent="VBox/Panel2"]
+margin_left = 404.0
+margin_top = 124.0
+margin_right = 468.0
+margin_bottom = 144.0
+text = "Register"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_clear" type="Button" parent="VBox/Panel2"]
+margin_left = 404.0
+margin_top = 187.656
+margin_right = 468.0
+margin_bottom = 207.656
+text = "Clear list"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_listen" type="Button" parent="VBox/Panel2"]
+margin_left = 404.0
+margin_top = 85.0
+margin_right = 455.0
+margin_bottom = 105.0
+text = "Listen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_stop" type="Button" parent="VBox/Panel2"]
+margin_left = 460.0
+margin_top = 85.0
+margin_right = 500.0
+margin_bottom = 105.0
+text = "Stop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="VBox/Panel2"]
+margin_left = 277.0
+margin_top = 80.0
+margin_right = 317.0
+margin_bottom = 104.0
+text = "Port"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txt_client_port" type="LineEdit" parent="VBox/Panel2"]
+margin_left = 323.0
+margin_top = 80.0
+margin_right = 381.0
+margin_bottom = 104.0
+text = "9000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="txt_log" type="TextEdit" parent="Panel"]
+margin_left = 10.0
+margin_top = 34.0
+margin_right = 500.0
+margin_bottom = 583.0
+size_flags_horizontal = 3
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 3.0
+margin_top = 9.0
+margin_right = 53.0
+margin_bottom = 23.0
+text = "Log"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="VBox/Panel/btn_start_announce" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="VBox/Panel/btn_start_server" to="." method="_on_btn_start_server_pressed"]
+[connection signal="pressed" from="VBox/Panel/btn_stop_server" to="." method="_on_btn_stop_server_pressed"]
+[connection signal="pressed" from="VBox/Panel/btn_stop_announce" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="VBox/Panel2/btn_register" to="." method="_on_btn_register_pressed"]
+[connection signal="pressed" from="VBox/Panel2/btn_clear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="VBox/Panel2/btn_listen" to="." method="_on_btn_listen_pressed"]
+[connection signal="pressed" from="VBox/Panel2/btn_stop" to="." method="_on_btn_stop_pressed"]
